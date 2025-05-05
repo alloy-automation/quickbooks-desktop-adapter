@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="QBWebConnectorSvc"
+    targetNamespace="http://developer.intuit.com/"
+    xmlns:tns="http://developer.intuit.com/"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+
+    <wsdl:service name="QBWebConnectorSvc">
+        <wsdl:port name="QBWebConnectorSvcSoap" binding="tns:QBWebConnectorSvcSoap">
+            <soap:address location="http://localhost:3000/soap"/>
+        </wsdl:port>
+    </wsdl:service>
+</definitions>

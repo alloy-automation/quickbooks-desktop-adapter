@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<QBWCXML>
+  <AppName>Estimates Adapter</AppName>
+  <AppID></AppID>
+  <AppURL>http://localhost:3000/soap</AppURL>
+  <AppDescription>Adapter for pulling Estimates</AppDescription>
+  <AppSupport>http://localhost/support</AppSupport>
+  <UserName>admin</UserName>
+  <OwnerID>{90A44FB5-33D9-4815-AC85-BC87A7E7D1EB}</OwnerID>
+  <FileID>{77F3D9B6-86F1-4FCC-B1FF-967DE1813D20}</FileID>
+  <Scheduler>
+    <RunEveryNMinutes>5</RunEveryNMinutes>
+  </Scheduler>
+</QBWCXML>
