@@ -1,0 +1,99 @@
+{
+    "info": {
+      "name": "QuickBooks Desktop Adapter",
+      "description": "Postman collection to test the QuickBooks Desktop Adapter API",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Sync Invoices",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Authorization",
+              "value": "Basic YWRtaW46Y2hhbmdlbWU=",
+              "type": "text"
+            }
+          ],
+          "url": {
+            "raw": "http://localhost:3000/api/sync/invoices",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["api", "sync", "invoices"]
+          }
+        }
+      },
+      {
+        "name": "Create Customer",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Authorization",
+              "value": "Basic YWRtaW46Y2hhbmdlbWU=",
+              "type": "text"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "type": "text"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"name\": \"John Doe\",\n  \"companyName\": \"Doe Inc.\",\n  \"email\": \"john.doe@example.com\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:3000/api/customers",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["api", "customers"]
+          }
+        }
+      },
+      {
+        "name": "Get Latest Customer Data",
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "Authorization",
+              "value": "Basic YWRtaW46Y2hhbmdlbWU=",
+              "type": "text"
+            }
+          ],
+          "url": {
+            "raw": "http://localhost:3000/api/customers/latest",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["api", "customers", "latest"]
+          }
+        }
+      },
+      {
+        "name": "Delete Customer (example ID)",
+        "request": {
+          "method": "DELETE",
+          "header": [
+            {
+              "key": "Authorization",
+              "value": "Basic YWRtaW46Y2hhbmdlbWU=",
+              "type": "text"
+            }
+          ],
+          "url": {
+            "raw": "http://localhost:3000/api/customers/80000001-123456",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["api", "customers", "80000001-123456"]
+          }
+        }
+      }
+    ]
+  }
+  
