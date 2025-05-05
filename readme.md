@@ -1,6 +1,6 @@
-## Alloy Automation QuickBooks Desktop Adapter
+# Alloy Automation QuickBooks Desktop Adapter
 
-This is a Node.js SOAP + REST adapter that integrates QuickBooks Desktop with external systems (like Alloy) using the QuickBooks Web Connector (QBWC).  It pulls data from QuickBooks, normalizes it, and sends it as webhook POSTs to a configured API (such as Alloy Embedded).
+This is an on-premise Quickbooks Desktop (Node.js SOAP + REST) adapter that integrates QuickBooks Desktop with external systems (like Alloy) using the QuickBooks Web Connector (QBWC).  It pulls data from QuickBooks, normalizes it, and sends it as webhook POSTs to a configured API (such as Alloy Embedded).
 
 ### Features
 
@@ -17,7 +17,8 @@ Supports polling QuickBooks entities:
   - Deposits
   - Journal Entries
 
-  Normalizes and transforms data into clean JSON. It also sends webhook POSTs to an external system (Alloy).
+Normalizes and transforms data into clean JSON. It also sends webhook POSTs to an external system (Alloy).
+
 ## Setup
 
 #### Install dependencies
@@ -29,13 +30,9 @@ Supports polling QuickBooks entities:
 Create a .env file:
 
 ```bash
-WEBHOOK_URL=https://webhooks.runalloy.com/webhook-endpoint
+WEBHOOK_URL=https://webhooks.runalloy.com/quickbooks-deskop/<userId>
 
 DEAD_LETTER_DIR=dead_letters
-
-BASIC_AUTH_USER=admin
-
-BASIC_AUTH_PASS=changeme
 ```
 
 #### Run the Adapter
@@ -59,4 +56,3 @@ deposits.qwc
 journalentries.qwc
 
 **Ensure the AppURL in .qwc points to:** http://localhost:3000/soap
-# quickbooks-desktop-adapter
